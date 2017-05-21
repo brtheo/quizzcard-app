@@ -2,9 +2,9 @@
   <div id="app">
     <router-view></router-view>
     <md-bottom-bar class="sticktobottom" md-theme="tealy">
-      <md-bottom-bar-item md-icon="collections_bookmark" href="/#/" md-active>Dictionaires</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="library_add" href="/#/add-dico">Ajouter</md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="play_for_work" href="/#/quizzcard" class="resize-icon-med">Jouer</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="collections_bookmark" :href="link('/')" md-active>Dictionaires</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="library_add" :href="link('/add-dico')">Ajouter</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="play_for_work" :href="link('/quizzcard')" class="resize-icon-med">Jouer</md-bottom-bar-item>
     </md-bottom-bar>
   </div>
 </template>
@@ -14,6 +14,12 @@ export default {
   name: 'app',
   data () {
     return {
+    }
+  },
+  methods: {
+    link (l) {
+      let locArr = window.location.toString().split('#')
+      return `${locArr[0]}#${l}`
     }
   }
 }
