@@ -7,7 +7,7 @@
             </md-button>
 
             <md-input-container>
-                 <label>Nom du dictionnaire</label>
+                <label>Nom du dictionnaire</label>
                 <md-input v-model="dicoName" :value="dicoName"></md-input>
             </md-input-container>
 
@@ -20,20 +20,6 @@
                 <md-icon>{{ dynamicIcon.icon }}</md-icon>
                 <md-tooltip md-direction="bottom">{{ dynamicIcon.tooltip | capitalize }}</md-tooltip>
             </md-button>
-
-            <router-link to="all-dico">
-                <md-button class="md-icon-button  md-warn" >
-                    <md-icon>collections_bookmark</md-icon>
-                    <md-tooltip md-direction="bottom">Voir mes dictionnaires</md-tooltip>
-                </md-button>
-            </router-link>
-
-            <router-link to="quizzcard">
-                <md-button class="md-icon-button  md-warn resize-icon" :disabled="notYetAdded">
-                    <md-icon >play_for_work</md-icon>
-                    <md-tooltip class="decale" md-direction="bottom">Utiliser ce dictionnaire</md-tooltip>
-                </md-button>  
-            </router-link>
 
         </md-toolbar>
 

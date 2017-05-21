@@ -7,8 +7,8 @@ import AllDico from './components/AllDico.vue'
 const routes = [
   {
     path: '/',
-    name: 'add-dico',
-    component: AddDico
+    name: 'all-dico',
+    component: AllDico
   },
   {
     path: '/quizzcard', 
@@ -16,9 +16,9 @@ const routes = [
     component: Quizzcard
   },
   {
-    path: '/all-dico', 
-    name: 'all-dico',
-    component: AllDico
+    path: '/add-dico', 
+    name: 'add-dico',
+    component: AddDico
   }
 ]
 

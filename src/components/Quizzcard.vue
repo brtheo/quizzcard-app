@@ -2,12 +2,9 @@
 	<div class="quizzcard">
   	<md-toolbar>
     	<h2 class="md-title" style="flex: 1" >{{ dicoName | capitalize | no_snake }}</h2>
-      	<router-link to="all-dico">
-          <md-button class="md-icon-button  md-warn" >
-					<md-icon>collections_bookmark</md-icon>
-					<md-tooltip md-direction="bottom" class="decale">Voir mes dictionnaires</md-tooltip>
-        </md-button>
-      </router-link>
+      <md-button md-theme="tealy" class="md-raised md-primary" @click.native="validate('dialog1')">
+        Valider
+      </md-button>
     </md-toolbar>
 
     <main>
@@ -41,9 +38,7 @@
     </main>
 
     <footer>
-      <md-button md-theme="tealy" class="md-raised md-primary" @click.native="validate('dialog1')">
-        Valider
-      </md-button>
+      
     </footer>
 
   	<md-dialog  ref="dialog">

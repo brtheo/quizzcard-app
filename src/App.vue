@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <md-bottom-bar class="sticktobottom" md-theme="tealy">
+      <md-bottom-bar-item md-icon="collections_bookmark" href="/#/" md-active>Dictionaires</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="library_add" href="/#/add-dico">Ajouter</md-bottom-bar-item>
+      <md-bottom-bar-item md-icon="play_for_work" href="/#/quizzcard" class="resize-icon-med">Jouer</md-bottom-bar-item>
+    </md-bottom-bar>
   </div>
 </template>
 
@@ -17,7 +22,7 @@ export default {
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-  //@import 'scss/sass-material-colors';
+  @import 'scss/sass-material-colors';
 
   body{overflow: hidden}
   #app {
@@ -60,17 +65,19 @@ export default {
         font-size: 30px;
     }
   }
+
   .md-tooltip {
     color: white;
     font-size: 14px !important;
     border-radius: 20px !important;
-    background: #ff5252 !important;
-    &.decale {
-      transform: translateX(-80%) !important;
-    }
+    background: mdc('red','600') !important;
+    &.decale {transform: translateX(-80%) !important;}
+    &.limy {background: mdc('lime') !important;}
   }
-  .limy {
-    background: mdc('lime') !important;
+  .sticktobottom {
+    position: absolute !important;
+    bottom: 0;
+    z-index:999;
   }
   p {
     margin: 0 !important;

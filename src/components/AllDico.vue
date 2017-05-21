@@ -3,12 +3,6 @@
 
         <md-toolbar>
             <h2 class="md-title" style="flex: 1">Mes dictionnaires</h2>
-            <router-link to="/">
-                <md-button id="validate" class="md-icon-button md-warn resize-icon-med">
-                    <md-icon>library_add</md-icon>
-                    <md-tooltip class="decale" md-direction="bottom">Nouveau dictionnaire</md-tooltip>
-                </md-button>
-            </router-link>         
         </md-toolbar>
 
         <main>
@@ -21,6 +15,12 @@
                         <md-toolbar>
                             <md-icon class="sub-corner noselect" >book</md-icon>
                             <h1 class="md-title" >{{ name | capitalize | no_snake }}</h1>
+
+                            <!--<div v-if="preloaded[name]">
+                            <md-button v-if="preloaded[name].preload" @click.native="preloaded[name].open = false">
+                            <md-icon>home</md-icon>
+                            </md-button>
+                            </div>-->
 
                             <md-button class="md-icon-button md-primary" md-theme="tealy" @click.native="loadDico">
                                 <md-icon>cached</md-icon>
@@ -162,7 +162,7 @@
 
                 $e.classList.add('inload')
                 /** Attribution des valeurs par défaut au composant Dico.vue préchargé **/
-                this.preloaded[this.$Name($e)] = {preload: false, name: this.$Name($e)}
+                this.preloaded[this.$Name($e)] = {preload: false, name: this.$Name($e), open: true}
 
                 to_fn() /** Timer de 900 ms **/
                 this.$forceUpdate() /** Mise à jour de la vue global **/
@@ -241,6 +241,7 @@
     @import '../scss/sass-material-colors';
 
     .all-dico {
+        
         .uploaded {
             position: absolute;
             bottom: 10px;
@@ -269,7 +270,7 @@
                     transform: translate3d(-15px, 0px, 0);
                     font-size: 40px;
                 }
-            }
+            }    
             .md-layout {
                 align-items: flex-start;
             }
@@ -338,10 +339,11 @@
     }
     .inload {
         animation: sweetLoad 1s forwards;
+
     }
     @keyframes sweetLoad {
-        from { transform: none; opacity: 1}
-        to { transform: rotate(-180deg); opacity:0;}
+        from { transform: none;}
+        to { transform: rotate(-180deg); display: none !important; position: absolute; left: -9999px;}
     }
     @keyframes sweetPlay {
         0% { transform: none;}

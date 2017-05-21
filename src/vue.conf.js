@@ -25,7 +25,7 @@ Vue.use(VueMaterial.MdTable)
 Vue.use(VueMaterial.MdLayout)
 Vue.use(VueMaterial.MdProgress)
 Vue.use(VueMaterial.MdSwitch)
-Vue.use(VueMaterial.MdSnackbar)
+Vue.use(VueMaterial.MdBottomBar)
 Vue.use(VueUniqIds,{attrs:['data-uuid'], template: '%qinu%-%arg[0]%'})
 
 Vue.mixin({ filters })
