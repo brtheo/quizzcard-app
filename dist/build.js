@@ -13617,6 +13617,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   name: 'app',
   data: function data() {
     return {};
+  },
+
+  methods: {
+    link: function link(l) {
+      var locArr = window.location.toString().split('#');
+      return locArr[0] + '#' + l;
+    }
   }
 });
 
@@ -17242,19 +17249,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('md-bottom-bar-item', {
     attrs: {
       "md-icon": "collections_bookmark",
-      "href": "/#/",
+      "href": _vm.link('/'),
       "md-active": ""
     }
   }, [_vm._v("Dictionaires")]), _vm._v(" "), _c('md-bottom-bar-item', {
     attrs: {
       "md-icon": "library_add",
-      "href": "/#/add-dico"
+      "href": _vm.link('/add-dico')
     }
   }, [_vm._v("Ajouter")]), _vm._v(" "), _c('md-bottom-bar-item', {
     staticClass: "resize-icon-med",
     attrs: {
       "md-icon": "play_for_work",
-      "href": "/#/quizzcard"
+      "href": _vm.link('/quizzcard')
     }
   }, [_vm._v("Jouer")])], 1)], 1)
 },staticRenderFns: []}
