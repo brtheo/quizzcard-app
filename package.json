@@ -1,7 +1,7 @@
 {
   "name": "quizzcard",
   "description": "a card association quizz",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "brossiertheo@live.fr",
   "private": true,
   "scripts": {
