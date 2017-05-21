@@ -13488,16 +13488,16 @@ module.exports = function(module) {
 
 var routes = [{
   path: '/',
-  name: 'add-dico',
-  component: __WEBPACK_IMPORTED_MODULE_1__components_AddDico_vue___default.a
+  name: 'all-dico',
+  component: __WEBPACK_IMPORTED_MODULE_3__components_AllDico_vue___default.a
 }, {
   path: '/quizzcard',
   name: 'quizzcard',
   component: __WEBPACK_IMPORTED_MODULE_2__components_Quizzcard_vue___default.a
 }, {
-  path: '/all-dico',
-  name: 'all-dico',
-  component: __WEBPACK_IMPORTED_MODULE_3__components_AllDico_vue___default.a
+  path: '/add-dico',
+  name: 'add-dico',
+  component: __WEBPACK_IMPORTED_MODULE_1__components_AddDico_vue___default.a
 }];
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ routes: routes }));
@@ -13550,7 +13550,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODU
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_material___default.a.MdLayout);
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_material___default.a.MdProgress);
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_material___default.a.MdSwitch);
-__WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_material___default.a.MdSnackbar);
+__WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_2_vue_material___default.a.MdBottomBar);
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].use(__WEBPACK_IMPORTED_MODULE_3_vue_uniq_ids__["a" /* default */], { attrs: ['data-uuid'], template: '%qinu%-%arg[0]%' });
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].mixin({ filters: __WEBPACK_IMPORTED_MODULE_4__filters__["a" /* default */] });
@@ -13607,6 +13607,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app',
@@ -13623,20 +13628,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store_DicoStore__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_AnimationDelay__ = __webpack_require__(3);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -13967,7 +13958,7 @@ var saveAs = __WEBPACK_IMPORTED_MODULE_3_browser_filesaver_fileSaver_js___defaul
 
             $e.classList.add('inload');
             /** Attribution des valeurs par défaut au composant Dico.vue préchargé **/
-            this.preloaded[this.$Name($e)] = { preload: false, name: this.$Name($e) };
+            this.preloaded[this.$Name($e)] = { preload: false, name: this.$Name($e), open: true };
 
             to_fn(); /** Timer de 900 ms **/
             this.$forceUpdate(); /** Mise à jour de la vue global **/
@@ -14149,11 +14140,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__store_DicoStore__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_mdcolor_palette__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mixins_AnimationDelay__ = __webpack_require__(3);
-//
-//
-//
-//
-//
 //
 //
 //
@@ -15194,7 +15180,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Rob
 exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);", ""]);
 
 // module
-exports.push([module.i, "body{overflow:hidden}#app{font-family:Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:mdc(\"grey\",\"900\")}main{height:85vh;max-height:85vh;width:100%;max-width:100%;overflow-x:hidden}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.resize-icon i{width:36px;min-width:36px;height:36px;min-height:36px;font-size:36px}.resize-icon-med i{width:30px;min-width:30px;height:30px;min-height:30px;font-size:30px}.md-tooltip{color:#fff;font-size:14px!important;border-radius:20px!important;background:#ff5252!important}.md-tooltip.decale{transform:translateX(-80%)!important}.limy{background:mdc(\"lime\")!important}p{margin:0!important;padding:0!important}", ""]);
+exports.push([module.i, "body{overflow:hidden}#app{font-family:Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#212121}main{height:85vh;max-height:85vh;width:100%;max-width:100%;overflow-x:hidden}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.resize-icon i{width:36px;min-width:36px;height:36px;min-height:36px;font-size:36px}.resize-icon-med i{width:30px;min-width:30px;height:30px;min-height:30px;font-size:30px}.md-tooltip{color:#fff;font-size:14px!important;border-radius:20px!important;background:#e53935!important}.md-tooltip.decale{transform:translateX(-80%)!important}.md-tooltip.limy{background:#cddc39!important}.sticktobottom{position:absolute!important;bottom:0;z-index:999}p{margin:0!important;padding:0!important}", ""]);
 
 // exports
 
@@ -15208,7 +15194,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".all-dico .uploaded{position:absolute;bottom:10px;display:flex;align-content:center;flex-direction:row;font-size:20px;color:#fff}.all-dico .uploaded .upload-done{margin-right:15px;background:#424242;padding:15px;border-radius:30px}.all-dico .uploaded .upload-done i{white:!important}.all-dico main{overflow-y:auto}.all-dico main .md-table-card,.all-dico main .upload-container,.all-dico main .uploaded{margin:15px}.all-dico main .md-table-card .md-icon,.all-dico main .upload-container .md-icon,.all-dico main .uploaded .md-icon{color:#616161}.all-dico main .md-table-card .sub-corner,.all-dico main .upload-container .sub-corner,.all-dico main .uploaded .sub-corner{color:#bdbdbd;transform:translate3d(-15px,0,0);font-size:40px}.all-dico main .md-layout{align-items:flex-start}.all-dico main .js-upload-container-hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .js-upload-container-hover label i,.all-dico main .js-upload-container-hover label p{color:#e0e0e0!important}.all-dico main .js-upload-container-hover label i{transform:translateY(-7px)}.all-dico main .upload-container{width:100%;height:100px;border-radius:5px;position:relative;transition:border .3s,box-shadow .5s}.all-dico main .upload-container:hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .upload-container:hover label i,.all-dico main .upload-container:hover label p{color:#e0e0e0!important}.all-dico main .upload-container .input-file{position:absolute;height:100%;opacity:0;width:100%;color:transparent;z-index:500}.all-dico main .upload-container label{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0);font-size:20px;width:100%;text-align:center;transition:color .2s}.all-dico main .upload-container .input-file,.all-dico main .upload-container label{cursor:pointer}.dico-load,.play-load{position:absolute!important}.dico-load{top:60px}.inup i{transition:transform .5s}.inup:hover i{transform:translateY(-7px)}.indown i{transition:transform .5s}.indown:hover i{transform:translateY(7px)}.inplay i{animation:sweetPlay 1s}.inload{animation:sweetLoad 1s forwards}@keyframes sweetLoad{0%{transform:none;opacity:1}to{transform:rotate(-180deg);opacity:0}}@keyframes sweetPlay{0%{transform:none}50%{transform:translateY(7px)}to{transform:none}}", ""]);
+exports.push([module.i, ".all-dico .uploaded{position:absolute;bottom:10px;display:flex;align-content:center;flex-direction:row;font-size:20px;color:#fff}.all-dico .uploaded .upload-done{margin-right:15px;background:#424242;padding:15px;border-radius:30px}.all-dico .uploaded .upload-done i{white:!important}.all-dico main{overflow-y:auto}.all-dico main .md-table-card,.all-dico main .upload-container,.all-dico main .uploaded{margin:15px}.all-dico main .md-table-card .md-icon,.all-dico main .upload-container .md-icon,.all-dico main .uploaded .md-icon{color:#616161}.all-dico main .md-table-card .sub-corner,.all-dico main .upload-container .sub-corner,.all-dico main .uploaded .sub-corner{color:#bdbdbd;transform:translate3d(-15px,0,0);font-size:40px}.all-dico main .md-layout{align-items:flex-start}.all-dico main .js-upload-container-hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .js-upload-container-hover label i,.all-dico main .js-upload-container-hover label p{color:#e0e0e0!important}.all-dico main .js-upload-container-hover label i{transform:translateY(-7px)}.all-dico main .upload-container{width:100%;height:100px;border-radius:5px;position:relative;transition:border .3s,box-shadow .5s}.all-dico main .upload-container:hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .upload-container:hover label i,.all-dico main .upload-container:hover label p{color:#e0e0e0!important}.all-dico main .upload-container .input-file{position:absolute;height:100%;opacity:0;width:100%;color:transparent;z-index:500}.all-dico main .upload-container label{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0);font-size:20px;width:100%;text-align:center;transition:color .2s}.all-dico main .upload-container .input-file,.all-dico main .upload-container label{cursor:pointer}.dico-load,.play-load{position:absolute!important}.dico-load{top:60px}.inup i{transition:transform .5s}.inup:hover i{transform:translateY(-7px)}.indown i{transition:transform .5s}.indown:hover i{transform:translateY(7px)}.inplay i{animation:sweetPlay 1s}.inload{animation:sweetLoad 1s forwards}@keyframes sweetLoad{0%{transform:none}to{transform:rotate(-180deg);display:none!important;position:absolute;left:-9999px}}@keyframes sweetPlay{0%{transform:none}50%{transform:translateY(7px)}to{transform:none}}", ""]);
 
 // exports
 
@@ -17033,18 +17019,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "flex": "1"
     }
-  }, [_vm._v(_vm._s(_vm._f("no_snake")(_vm._f("capitalize")(_vm.dicoName))))]), _vm._v(" "), _c('router-link', {
+  }, [_vm._v(_vm._s(_vm._f("no_snake")(_vm._f("capitalize")(_vm.dicoName))))]), _vm._v(" "), _c('md-button', {
+    staticClass: "md-raised md-primary",
     attrs: {
-      "to": "all-dico"
+      "md-theme": "tealy"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.validate('dialog1')
+      }
     }
-  }, [_c('md-button', {
-    staticClass: "md-icon-button  md-warn"
-  }, [_c('md-icon', [_vm._v("collections_bookmark")]), _vm._v(" "), _c('md-tooltip', {
-    staticClass: "decale",
-    attrs: {
-      "md-direction": "bottom"
-    }
-  }, [_vm._v("Voir mes dictionnaires")])], 1)], 1)], 1), _vm._v(" "), _c('main', [_c('transition-group', {
+  }, [_vm._v("\n        Valider\n      ")])], 1), _vm._v(" "), _c('main', [_c('transition-group', {
     staticClass: "md-layout md-row",
     attrs: {
       "tag": "div",
@@ -17108,17 +17093,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }), _vm._v(" "), _c('md-card-header', [_c('div', {
       staticClass: "md-title center"
     }, [_vm._v(" " + _vm._s(word.res) + " ")])])], 1)], 1)])
-  }))], 1), _vm._v(" "), _c('footer', [_c('md-button', {
-    staticClass: "md-raised md-primary",
-    attrs: {
-      "md-theme": "tealy"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.validate('dialog1')
-      }
-    }
-  }, [_vm._v("\n        Valider\n      ")])], 1), _vm._v(" "), _c('md-dialog', {
+  }))], 1), _vm._v(" "), _c('footer'), _vm._v(" "), _c('md-dialog', {
     ref: "dialog"
   }, [_c('md-dialog-title', [_vm._v(_vm._s(_vm._f("capitalize")(_vm.dialog.title)))]), _vm._v(" "), _c('md-dialog-content', [_vm._v(_vm._s(_vm.dialog.content))]), _vm._v(" "), _c('md-dialog-actions', [(!_vm.gg) ? _c('md-button', {
     staticClass: "md-primary",
@@ -17185,31 +17160,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "md-direction": "bottom"
     }
-  }, [_vm._v(_vm._s(_vm._f("capitalize")(_vm.dynamicIcon.tooltip)))])], 1), _vm._v(" "), _c('router-link', {
-    attrs: {
-      "to": "all-dico"
-    }
-  }, [_c('md-button', {
-    staticClass: "md-icon-button  md-warn"
-  }, [_c('md-icon', [_vm._v("collections_bookmark")]), _vm._v(" "), _c('md-tooltip', {
-    attrs: {
-      "md-direction": "bottom"
-    }
-  }, [_vm._v("Voir mes dictionnaires")])], 1)], 1), _vm._v(" "), _c('router-link', {
-    attrs: {
-      "to": "quizzcard"
-    }
-  }, [_c('md-button', {
-    staticClass: "md-icon-button  md-warn resize-icon",
-    attrs: {
-      "disabled": _vm.notYetAdded
-    }
-  }, [_c('md-icon', [_vm._v("play_for_work")]), _vm._v(" "), _c('md-tooltip', {
-    staticClass: "decale",
-    attrs: {
-      "md-direction": "bottom"
-    }
-  }, [_vm._v("Utiliser ce dictionnaire")])], 1)], 1)], 1), _vm._v(" "), _c('main', [_c('form', {
+  }, [_vm._v(_vm._s(_vm._f("capitalize")(_vm.dynamicIcon.tooltip)))])], 1)], 1), _vm._v(" "), _c('main', [_c('form', {
     attrs: {
       "novalidate": ""
     },
@@ -17283,7 +17234,29 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "id": "app"
     }
-  }, [_c('router-view')], 1)
+  }, [_c('router-view'), _vm._v(" "), _c('md-bottom-bar', {
+    staticClass: "sticktobottom",
+    attrs: {
+      "md-theme": "tealy"
+    }
+  }, [_c('md-bottom-bar-item', {
+    attrs: {
+      "md-icon": "collections_bookmark",
+      "href": "/#/",
+      "md-active": ""
+    }
+  }, [_vm._v("Dictionaires")]), _vm._v(" "), _c('md-bottom-bar-item', {
+    attrs: {
+      "md-icon": "library_add",
+      "href": "/#/add-dico"
+    }
+  }, [_vm._v("Ajouter")]), _vm._v(" "), _c('md-bottom-bar-item', {
+    staticClass: "resize-icon-med",
+    attrs: {
+      "md-icon": "play_for_work",
+      "href": "/#/quizzcard"
+    }
+  }, [_vm._v("Jouer")])], 1)], 1)
 },staticRenderFns: []}
 
 /***/ }),
@@ -17298,21 +17271,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: {
       "flex": "1"
     }
-  }, [_vm._v("Mes dictionnaires")]), _vm._v(" "), _c('router-link', {
-    attrs: {
-      "to": "/"
-    }
-  }, [_c('md-button', {
-    staticClass: "md-icon-button md-warn resize-icon-med",
-    attrs: {
-      "id": "validate"
-    }
-  }, [_c('md-icon', [_vm._v("library_add")]), _vm._v(" "), _c('md-tooltip', {
-    staticClass: "decale",
-    attrs: {
-      "md-direction": "bottom"
-    }
-  }, [_vm._v("Nouveau dictionnaire")])], 1)], 1)], 1), _vm._v(" "), _c('main', [(_vm.playLoad) ? _c('md-progress', {
+  }, [_vm._v("Mes dictionnaires")])]), _vm._v(" "), _c('main', [(_vm.playLoad) ? _c('md-progress', {
     staticClass: "play-load",
     attrs: {
       "md-indeterminate": "",
