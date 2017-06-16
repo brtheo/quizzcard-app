@@ -21,7 +21,7 @@ class DicoStore {
                  * @key {string} nom du dictionnaire
                  * @value {array} chaque entrée du dictionnaire
                  */
-                "default": [
+               /*
                     {
                         "res": "manger",
                         "req": "\uba39\ub2e4"
@@ -160,7 +160,7 @@ class DicoStore {
                         "res": "apprendre",
                         "req": "\uacf5\ubd80\ud558\ub2e4"
                     }
-                ]
+                ]*/
             }
         }
     }
