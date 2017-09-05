@@ -14,153 +14,31 @@ class DicoStore {
     constructor () {
         this.state = {
             /** Nom du dictionnaire courant **/
-            "chosedDico": "def2",
+            "chosedDico": "default",
             /** Créer un objet qui contiendra les dictionnaires **/
             "dico": {
                 /**
                  * @key {string} nom du dictionnaire
                  * @value {array} chaque entrée du dictionnaire
                  */
-               /*
+                "default": [
                     {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
+                        "res": "1+1",
+                        "req": "11"
                     },
                     {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
+                        "res": "bonjour",
+                        "req": "hello"
                     },
                     {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
+                        "res": "Question of Life, the Universe, and Everything",
+                        "req": "42"
                     },
                     {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
+                        "res": "sqrt(PI)",
+                        "req": "1.7724538509055159"
                     }
-                ],
-                "def2": [
-                    {
-                        "res": "manger",
-                        "req": "\uba39\ub2e4"
-                    },
-                    {
-                        "res": "boire",
-                        "req": "\ub9c8\uc2dc\ub2e4"
-                    },
-                    {
-                        "res": "lire",
-                        "req": "\uc77d\ub2e4"
-                    },
-                    {
-                        "res": "apprendre",
-                        "req": "\uacf5\ubd80\ud558\ub2e4"
-                    }
-                ]*/
+                ]
             }
         }
     }
