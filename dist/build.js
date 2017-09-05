@@ -459,7 +459,7 @@ var DicoStore = function () {
 
         this.state = {
             /** Nom du dictionnaire courant **/
-            "chosedDico": "def2",
+            "chosedDico": "default",
             /** Créer un objet qui contiendra les dictionnaires **/
             "dico": {
                 /**
@@ -467,108 +467,17 @@ var DicoStore = function () {
                  * @value {array} chaque entrée du dictionnaire
                  */
                 "default": [{
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
+                    "res": "1+1",
+                    "req": "11"
                 }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
+                    "res": "bonjour",
+                    "req": "hello"
                 }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
+                    "res": "Question of Life, the Universe, and Everything",
+                    "req": "42"
                 }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
-                }],
-                "def2": [{
-                    "res": "manger",
-                    "req": "\uBA39\uB2E4"
-                }, {
-                    "res": "boire",
-                    "req": "\uB9C8\uC2DC\uB2E4"
-                }, {
-                    "res": "lire",
-                    "req": "\uC77D\uB2E4"
-                }, {
-                    "res": "apprendre",
-                    "req": "\uACF5\uBD80\uD558\uB2E4"
+                    "res": "sqrt(PI)",
+                    "req": "1.7724538509055159"
                 }]
             }
         };
