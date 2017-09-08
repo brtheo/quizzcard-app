@@ -13467,7 +13467,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].mixin({ filters: __WEBPACK_
 __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */].material.registerTheme({
   'default': {
     primary: { color: 'grey', hue: 800 },
-    accent: { color: 'red', hue: 900 },
+    accent: { color: 'red', hue: 'A200' },
     warn: { color: 'orange', hue: 700 }
   },
   'tealy': {
@@ -13788,9 +13788,9 @@ var saveAs = __WEBPACK_IMPORTED_MODULE_3_browser_filesaver_fileSaver_js___defaul
 
     watch: {
         /**
-          * Surveille des changements sur la valeur this.uploadDone 
+          * Surveille des changements sur la valeur uploadDone 
           * pour la réinitialiser au bout de 1.5 secondes et vider le grille-pain
-          * @param {boolean} valeur de this.uploadDone
+          * @param {boolean} valeur de uploadDone
           * @return  {void}
           */
         uploadDone: function uploadDone(b) {
@@ -15067,7 +15067,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".quizzcard main{display:flex;align-items:stretch;align-content:center;flex-direction:row}.quizzcard main .btncard{cursor:pointer;font-family:Roboto;background:#fff;border:0;color:#212121}.quizzcard main .btncard:disabled{cursor:not-allowed}.quizzcard main .btncard:disabled .btncard_content{color:#9e9e9e;background:#e0e0e0;box-shadow:none;cursor:not-allowed}.quizzcard main .btncard:disabled .btncard_content:hover{box-shadow:none}.quizzcard main .btncard:disabled .btncard_content .corner{border-color:transparent}.quizzcard main .btncard:disabled .btncard_content .corner:before{background:#e0e0e0;box-shadow:inset 0 0 1px 0 #e0e0e0,0 0 1px 0 #e0e0e0}.quizzcard main .btncard{font-size:30px;height:150px;width:150px}.quizzcard main .btncard_content{height:130px}.quizzcard main .btncard_content .corner{transition:border-color .2s;position:absolute;right:0;width:0;height:0;border-style:solid;border-width:0 45px 45px 0;border-color:transparent;color:#fff}.quizzcard main .btncard_content .center{transform:translateY(100%)}.quizzcard footer{text-align:center}.checkmark:before,.crossmark:before{position:absolute;transform:translate(5px,10px);background:#fff;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 1px 0 #fff,0 0 1px 0 #fff;font-family:Material Icons}.checkmark:before{content:\"done\"}.crossmark:before{content:\"clear\";color:#e53935!important}", ""]);
+exports.push([module.i, ".quizzcard main{display:flex;align-items:stretch;align-content:center;flex-direction:row;margin-top:10px}.quizzcard main .btncard{cursor:pointer;font-family:Roboto;background:#fff;border:0;color:#212121}.quizzcard main .btncard:disabled{cursor:not-allowed}.quizzcard main .btncard:disabled .btncard_content{color:#9e9e9e;background:#e0e0e0;box-shadow:none;cursor:not-allowed}.quizzcard main .btncard:disabled .btncard_content:hover{box-shadow:none}.quizzcard main .btncard:disabled .btncard_content .corner{border-color:transparent}.quizzcard main .btncard:disabled .btncard_content .corner:before{background:#e0e0e0;box-shadow:inset 0 0 1px 0 #e0e0e0,0 0 1px 0 #e0e0e0}.quizzcard main .btncard{font-size:20px!important;height:75px;width:300px}.quizzcard main .btncard_content{height:75px}.quizzcard main .btncard_content .md-card-header:last-child{margin-bottom:0!important}.quizzcard main .btncard_content .md-card-header{padding:0!important}.quizzcard main .btncard_content .corner{transition:border-color .2s;position:absolute;right:0;width:0;height:0;border-style:solid;border-width:0 45px 45px 0;border-color:transparent;color:#fff}.quizzcard main .btncard_content .toolong{line-height:none;font-size:20px}.quizzcard main .btncard_content .center{line-height:3}.quizzcard footer{text-align:center}.checkmark:before,.crossmark:before{position:absolute;transform:translate(5px,10px);background:#fff;width:30px;height:30px;border-radius:50%;box-shadow:inset 0 0 1px 0 #fff,0 0 1px 0 #fff;font-family:Material Icons}.checkmark:before{content:\"done\"}.crossmark:before{content:\"clear\";color:#e53935!important}", ""]);
 
 // exports
 
@@ -15110,7 +15110,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, ".all-dico .uploaded{position:absolute;bottom:10px;display:flex;align-content:center;flex-direction:row;font-size:20px;color:#fff}.all-dico .uploaded .upload-done{margin-right:15px;background:#424242;padding:15px;border-radius:30px}.all-dico .uploaded .upload-done i{white:!important}.all-dico main{overflow-y:auto}.all-dico main .md-table-card,.all-dico main .upload-container,.all-dico main .uploaded{margin:15px}.all-dico main .md-table-card .md-icon,.all-dico main .upload-container .md-icon,.all-dico main .uploaded .md-icon{color:#616161}.all-dico main .md-table-card .sub-corner,.all-dico main .upload-container .sub-corner,.all-dico main .uploaded .sub-corner{color:#bdbdbd;transform:translate3d(-15px,0,0);font-size:40px}.all-dico main .md-layout{align-items:flex-start}.all-dico main .js-upload-container-hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .js-upload-container-hover label i,.all-dico main .js-upload-container-hover label p{color:#e0e0e0!important}.all-dico main .js-upload-container-hover label i{transform:translateY(-7px)}.all-dico main .upload-container{width:100%;height:100px;border-radius:5px;position:relative;transition:border .3s,box-shadow .5s}.all-dico main .upload-container:hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .upload-container:hover label i,.all-dico main .upload-container:hover label p{color:#e0e0e0!important}.all-dico main .upload-container .input-file{position:absolute;height:100%;opacity:0;width:100%;color:transparent;z-index:500}.all-dico main .upload-container label{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0);font-size:20px;width:100%;text-align:center;transition:color .2s}.all-dico main .upload-container .input-file,.all-dico main .upload-container label{cursor:pointer}.dico-load,.play-load{position:absolute!important}.dico-load{top:60px}.inup i{transition:transform .5s}.inup:hover i{transform:translateY(-7px)}.indown i{transition:transform .5s}.indown:hover i{transform:translateY(7px)}.inplay i{animation:sweetPlay 1s}.inload{animation:sweetLoad 1s forwards}@keyframes sweetLoad{0%{transform:none}to{transform:rotate(-180deg);display:none!important;position:absolute;left:-9999px}}@keyframes sweetPlay{0%{transform:none}50%{transform:translateY(7px)}to{transform:none}}", ""]);
+exports.push([module.i, ".all-dico .uploaded{position:absolute;bottom:45px;display:flex;align-content:center;flex-direction:row;font-size:20px;color:#fff}.all-dico .uploaded .upload-done{margin-right:15px;background:#424242;padding:15px;border-radius:30px}.all-dico .uploaded .upload-done i{white:!important}.all-dico main{overflow-y:auto}.all-dico main .md-table-card,.all-dico main .upload-container,.all-dico main .uploaded{margin:15px}.all-dico main .md-table-card .md-icon,.all-dico main .upload-container .md-icon,.all-dico main .uploaded .md-icon{color:#616161}.all-dico main .md-table-card .sub-corner,.all-dico main .upload-container .sub-corner,.all-dico main .uploaded .sub-corner{color:#bdbdbd;transform:translate3d(-15px,0,0);font-size:40px}.all-dico main .md-layout{align-items:flex-start}.all-dico main .js-upload-container-hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .js-upload-container-hover label i,.all-dico main .js-upload-container-hover label p{color:#e0e0e0!important}.all-dico main .js-upload-container-hover label i{transform:translateY(-7px)}.all-dico main .upload-container{width:100%;height:100px;border-radius:5px;position:relative;transition:border .3s,box-shadow .5s}.all-dico main .upload-container:hover{border:5px dashed #e0e0e0;box-shadow:none}.all-dico main .upload-container:hover label i,.all-dico main .upload-container:hover label p{color:#e0e0e0!important}.all-dico main .upload-container .input-file{position:absolute;height:100%;opacity:0;width:100%;color:transparent;z-index:500}.all-dico main .upload-container label{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0);font-size:20px;width:100%;text-align:center;transition:color .2s}.all-dico main .upload-container .input-file,.all-dico main .upload-container label{cursor:pointer}.dico-load,.play-load{position:absolute!important}.dico-load{top:60px}.inup i{transition:transform .5s}.inup:hover i{transform:translateY(-7px)}.indown i{transition:transform .5s}.indown:hover i{transform:translateY(7px)}.inplay i{animation:sweetPlay 1s}.inload{animation:sweetLoad 1s forwards}@keyframes sweetLoad{0%{transform:none}to{transform:rotate(-180deg);display:none!important;position:absolute;left:-9999px}}@keyframes sweetPlay{0%{transform:none}50%{transform:translateY(7px)}to{transform:none}}", ""]);
 
 // exports
 
@@ -16974,7 +16974,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('span', {
       staticClass: "corner"
     }), _vm._v(" "), _c('md-card-header', [_c('div', {
-      staticClass: "md-title center"
+      class: word.req.length >= 22 ? 'md-title toolong' : 'md-title center'
     }, [_vm._v(" " + _vm._s(word.req) + " ")])])], 1)], 1)])
   })), _vm._v(" "), _c('transition-group', {
     staticClass: "md-layout md-row",
@@ -17007,7 +17007,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_c('span', {
       staticClass: "corner"
     }), _vm._v(" "), _c('md-card-header', [_c('div', {
-      staticClass: "md-title center"
+      class: word.res.length >= 22 ? 'md-title toolong' : 'md-title center'
     }, [_vm._v(" " + _vm._s(word.res) + " ")])])], 1)], 1)])
   }))], 1), _vm._v(" "), _c('footer'), _vm._v(" "), _c('md-dialog', {
     ref: "dialog"
