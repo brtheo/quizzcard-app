@@ -95,9 +95,9 @@
         },
         watch: {
             /**
-              * Surveille des changements sur la valeur this.uploadDone 
+              * Surveille des changements sur la valeur uploadDone 
               * pour la réinitialiser au bout de 1.5 secondes et vider le grille-pain
-              * @param {boolean} valeur de this.uploadDone
+              * @param {boolean} valeur de uploadDone
               * @return  {void}
               */
             uploadDone(b) {
@@ -244,7 +244,7 @@
         
         .uploaded {
             position: absolute;
-            bottom: 10px;
+            bottom: 45px;
             display: flex;
             align-content: center;
             flex-direction: row;

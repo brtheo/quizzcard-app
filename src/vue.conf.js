@@ -34,7 +34,7 @@ Vue.material.registerTheme(
   {
     'default':{
       primary: {color: 'grey', hue: 800},
-      accent: {color: 'red', hue: 900},
+      accent: {color: 'red', hue: 'A200'},
       warn: {color: 'orange', hue: 700}
     },
     'tealy': {

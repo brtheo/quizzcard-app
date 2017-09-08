@@ -15,7 +15,7 @@
 						<md-card md-with-hover class="btncard_content">
 							<span class="corner"></span>
 							<md-card-header>
-								<div class="md-title center"> {{ word.req }} </div>
+								<div :class="word.req.length >= 22 ? 'md-title toolong' : 'md-title center'"> {{ word.req }} </div>
 							</md-card-header>
 						</md-card>
 					</button>
@@ -28,7 +28,7 @@
 						<md-card md-with-hover class="btncard_content">
 							<span class="corner"></span>
 							<md-card-header>
-								<div class="md-title center"> {{ word.res }} </div>
+								<div :class="word.res.length >= 22 ? 'md-title toolong' : 'md-title center'"> {{ word.res }} </div>
 							</md-card-header>
 						</md-card>
 					</button>
@@ -305,6 +305,7 @@
       align-items: stretch;
       align-content: center;
       flex-direction: row;
+      margin-top: 10px;
 
       .btncard {
         cursor: pointer;
@@ -333,11 +334,13 @@
         }
       }
 			.btncard {
-				font-size: 30px;
-				height: 150px;
-				width: 150px;
+				font-size: 20px !important;
+				height: 75px;
+				width: 300px;
 				&_content {
-					height: 130px;
+					height: 75px;
+          .md-card-header:last-child {margin-bottom: 0px !important;}
+          .md-card-header {padding: 0px !important;}
 					.corner{
 						transition: border-color 0.2s;
 						position: absolute;
@@ -349,8 +352,12 @@
 						border-color: transparent transparent transparent transparent;
 						color: white;
 					}
+          .toolong {
+            line-height: none;
+            font-size: 20px;
+          }
 					.center {
-						transform: translateY(100%);
+            line-height: 3;
 					}
 				}
 			}
