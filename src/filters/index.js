@@ -44,5 +44,18 @@ export default {
         if(!v) return ''
         v = v.toString()
         return v.split('.')[0]
+    },
+
+    /**
+     * Retourne la string tronquer avec ... en fin
+     * @param {string} Value 
+     * @return {string}
+     */
+    troncate_long (v) {
+        if(!v) return ''
+        v = v.toString()
+        if(v.length >= 25)
+            return v.substr(0,25) +'...'
+        else return v
     }
 }

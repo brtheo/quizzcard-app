@@ -250,15 +250,15 @@
         */
       validate () {
         this.$refs.dialog.open() /** Ouverture de la dialog box **/
-        let pons = Object.keys(this.responses).map( o => this.responses[o]) /** Passage d'un objet à un tableau **/
+        let responses = Object.keys(this.responses).map( o => this.responses[o]) /** Passage d'un objet à un tableau **/
         let c = 0 /** Compte des bonnes réponses **/
         let p = 0 /** Pourcentage de bonnes réponses **/
 
         /** Verification : si la taille du tableau des réponses est différente de la taille du dictionnaire courant **/
-        if(pons.length != this.dico.length) this.dialog.title = "Veuillez répondre a toutes les questions"
+        if(responses.length != this.dico.length) this.dialog.title = "Veuillez répondre a toutes les questions"
         /** Tout est bon, on fait le traitement **/
         else {
-          pons.forEach( o => {
+          responses.forEach( o => {
             /** Bonne réponse **/
             if(o.req === o.res) c++
             /** Mauvaise réponse **/
@@ -269,7 +269,7 @@
             }
           })
 
-          p = ((c*100)/pons.length).toFixed(2) /** Calcul pourcentage **/
+          p = ((c*100)/responses.length).toFixed(2) /** Calcul pourcentage **/
           this.gg = p.includes('100') ? true : this.gg /** Si 100% de bonne réponses, this.gg devient vrai **/
 
           /** Définition du message à afficher en fonction de sa note **/

@@ -467,17 +467,17 @@ var DicoStore = function () {
                  * @value {array} chaque entrée du dictionnaire
                  */
                 "default": [{
-                    "res": "1+1",
-                    "req": "11"
+                    "res": "11",
+                    "req": "1+1"
                 }, {
                     "res": "bonjour",
                     "req": "hello"
                 }, {
-                    "res": "Question of Life, the Universe, and Everything",
-                    "req": "42"
+                    "res": "42",
+                    "req": "Question of Life, the Universe, and Everything"
                 }, {
-                    "res": "sqrt(PI)",
-                    "req": "1.7724538509055159"
+                    "res": "1.7724538509055159",
+                    "req": "Racine carré de PI"
                 }]
             }
         };
@@ -14027,6 +14027,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -14325,17 +14331,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this = this;
 
       this.$refs.dialog.open(); /** Ouverture de la dialog box **/
-      var pons = Object.keys(this.responses).map(function (o) {
+      var responses = Object.keys(this.responses).map(function (o) {
         return _this.responses[o];
       }); /** Passage d'un objet à un tableau **/
       var c = 0; /** Compte des bonnes réponses **/
       var p = 0; /** Pourcentage de bonnes réponses **/
 
       /** Verification : si la taille du tableau des réponses est différente de la taille du dictionnaire courant **/
-      if (pons.length != this.dico.length) this.dialog.title = "Veuillez répondre a toutes les questions";
+      if (responses.length != this.dico.length) this.dialog.title = "Veuillez répondre a toutes les questions";
       /** Tout est bon, on fait le traitement **/
       else {
-          pons.forEach(function (o) {
+          responses.forEach(function (o) {
             /** Bonne réponse **/
             if (o.req === o.res) c++;
             /** Mauvaise réponse **/
@@ -14354,7 +14360,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
               }
           });
 
-          p = (c * 100 / pons.length).toFixed(2); /** Calcul pourcentage **/
+          p = (c * 100 / responses.length).toFixed(2); /** Calcul pourcentage **/
           this.gg = p.includes('100') ? true : this.gg; /** Si 100% de bonne réponses, this.gg devient vrai **/
 
           /** Définition du message à afficher en fonction de sa note **/
@@ -14457,6 +14463,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         if (!v) return '';
         v = v.toString();
         return v.split('.')[0];
+    },
+
+
+    /**
+     * Retourne la string tronquer avec ... en fin
+     * @param {string} Value 
+     * @return {string}
+     */
+    troncate_long: function troncate_long(v) {
+        if (!v) return '';
+        v = v.toString();
+        if (v.length >= 25) return v.substr(0, 25) + '...';else return v;
     }
 });
 
@@ -15096,7 +15114,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Rob
 exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);", ""]);
 
 // module
-exports.push([module.i, "body{overflow:hidden}#app{font-family:Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#212121}main{height:85vh;max-height:85vh;width:100%;max-width:100%;overflow-x:hidden}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.resize-icon i{width:36px;min-width:36px;height:36px;min-height:36px;font-size:36px}.resize-icon-med i{width:30px;min-width:30px;height:30px;min-height:30px;font-size:30px}.md-tooltip{color:#fff;font-size:14px!important;border-radius:20px!important;background:#e53935!important}.md-tooltip.decale{transform:translateX(-80%)!important}.md-tooltip.limy{background:#cddc39!important}.sticktobottom{position:absolute!important;bottom:0;z-index:999}p{margin:0!important;padding:0!important}", ""]);
+exports.push([module.i, "body{overflow:hidden}#app{font-family:Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#212121}main{height:85vh;max-height:85vh;width:100%;max-width:100%;overflow-x:hidden}.noselect{-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.resize-icon i{width:36px;min-width:36px;height:36px;min-height:36px;font-size:36px}.resize-icon-med i{width:30px;min-width:30px;height:30px;min-height:30px;font-size:30px}.md-tooltip{color:#fff;font-size:14px!important;border-radius:20px!important;background:#e53935!important}.md-tooltip.decale{transform:translateX(-80%)!important}.md-tooltip.limy{background:#cddc39!important}.md-tooltip.blue-grey{background:#607d8b!important;transform:translate3d(-200px,5px,0)!important}.sticktobottom{position:absolute!important;bottom:0;z-index:999}p{margin:0!important;padding:0!important}", ""]);
 
 // exports
 
@@ -16884,20 +16902,7 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "dico"
-  }, [_c('md-table', [_c('md-table-header', [_c('md-table-row', [_c('md-table-head', [_vm._v("Question")]), _vm._v(" "), _c('md-table-head', [_vm._v("Réponse")]), _vm._v(" "), _c('md-table-head', [_c('md-switch', {
-    staticClass: "md-primary",
-    attrs: {
-      "md-theme": "tealy",
-      "id": "show-id"
-    },
-    model: {
-      value: (_vm.showID),
-      callback: function($$v) {
-        _vm.showID = $$v
-      },
-      expression: "showID"
-    }
-  }, [_vm._v("id")])], 1)], 1)], 1), _vm._v(" "), _c('transition-group', {
+  }, [_c('md-table', [_c('md-table-header', [_c('md-table-row', [_c('md-table-head', [_vm._v("Question")]), _vm._v(" "), _c('md-table-head', [_vm._v("Réponse")])], 1)], 1), _vm._v(" "), _c('transition-group', {
     staticClass: "md-table-body dico-body",
     attrs: {
       "name": "bounceRight",
@@ -16910,16 +16915,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       style: (_vm.$animationDelay(i))
     }, [_c('md-table-cell', {
       staticClass: "animated-cell"
-    }, [_vm._v(_vm._s(dico.req))]), _vm._v(" "), _c('md-table-cell', {
-      staticClass: "animated-cell"
-    }, [_vm._v(_vm._s(dico.res))]), _vm._v(" "), _c('md-table-cell', {
-      staticClass: "animated-cell"
-    }, [_c('p', {
-      staticClass: "dico-uuid",
-      class: {
-        show: _vm.showID
+    }, [_vm._v("\n                    " + _vm._s(_vm._f("troncate_long")(dico.req)) + "\n                    "), _c('md-tooltip', {
+      staticClass: "blue-grey",
+      attrs: {
+        "md-direction": "right"
       }
-    }, [_vm._v(_vm._s(dico.uuid) + "0")])])], 1)
+    }, [_vm._v(_vm._s(dico.req))])], 1), _vm._v(" "), _c('md-table-cell', {
+      staticClass: "animated-cell"
+    }, [_vm._v("\n                    " + _vm._s(_vm._f("troncate_long")(dico.res)) + "\n                    "), _c('md-tooltip', {
+      staticClass: "blue-grey",
+      attrs: {
+        "md-direction": "right"
+      }
+    }, [_vm._v(_vm._s(dico.res))])], 1)], 1)
   }))], 1)], 1)
 },staticRenderFns: []}
 

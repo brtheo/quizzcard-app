@@ -79,6 +79,7 @@ export default {
     background: mdc('red','600') !important;
     &.decale {transform: translateX(-80%) !important;}
     &.limy {background: mdc('lime') !important;}
+    &.blue-grey {background: mdc('blue-grey') !important; transform: translate3d(-200px, 5px, 0) !important; }
   }
   .sticktobottom {
     position: absolute !important;

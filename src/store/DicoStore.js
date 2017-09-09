@@ -23,20 +23,20 @@ class DicoStore {
                  */
                 "default": [
                     {
-                        "res": "1+1",
-                        "req": "11"
+                        "res": "11",
+                        "req": "1+1"
                     },
                     {
                         "res": "bonjour",
                         "req": "hello"
                     },
                     {
-                        "res": "Question of Life, the Universe, and Everything",
-                        "req": "42"
+                        "res": "42",
+                        "req": "Question of Life, the Universe, and Everything"
                     },
                     {
-                        "res": "sqrt(PI)",
-                        "req": "1.7724538509055159"
+                        "res": "1.7724538509055159",
+                        "req": "Racine carré de PI"
                     }
                 ]
             }
